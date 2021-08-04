@@ -29,6 +29,11 @@ func TestSquere(t *testing.T) {
 			input:  []int{3, 5},
 			output: 15,
 		},
+		{
+			title:  "0×1の答えが0になる",
+			input:  []int{0, 1},
+			output: 0,
+		},
 	} {
 		t.Run("Square:"+td.title, func(t *testing.T) {
 			result := square(td.input[0], td.input[1])
