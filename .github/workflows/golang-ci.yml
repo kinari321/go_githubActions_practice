@@ -1,9 +1,16 @@
-name: Test
+name: golang-ci
 
 on:
   push:
-    branches:
-      - main
+    paths-ignore:
+      - README.md
+      - Dockerfile
+      - docker-compose.yml
+  pull_request:
+    paths-ignore:
+      - README.md
+      - Dockerfile
+      - docker-compose.yml
 
 jobs:
   test:
